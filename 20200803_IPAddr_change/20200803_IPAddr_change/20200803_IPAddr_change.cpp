@@ -1,4 +1,5 @@
 ﻿#pragma comment(lib, "ws2_32")
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <stdio.h>
@@ -23,6 +24,7 @@ int main() {
 
 	printf("\n");
 
+
 	//IPv6 변환 연습
 
 	//원래의 IPv6 주소 출력
@@ -45,6 +47,8 @@ int main() {
 	WSAAddressToString((SOCKADDR *)&ipv6num, sizeof(ipv6num), NULL, (LPWSTR)ipaddr, &ipaddrlen);
 	printf("IPv6 주소(다시 변환 후) = %s\n", ipaddr);
 
+
 	WSACleanup();
 	return 0;
+
 }
