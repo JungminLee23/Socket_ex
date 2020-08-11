@@ -99,12 +99,13 @@ int main() {
 		printf("[TCP 클라이언트] %d 바이트를 보냈습니다. \n", retval);
 
 		//데이터 받기
-		retval = recv(sock, buf, retval, 0);
+		retval = recvn(sock, buf, retval, 0);
 		if (retval == SOCKET_ERROR) {
 			err_display("recv()");
 			break;
 		}
-		
+		else if (retval == 0) break;
+
 		//받은 데이터 출력
 		buf[retval] = '\0';
 		printf("[TCP 클라이언트] %d 바이트를 받았습니다.\n", retval);
