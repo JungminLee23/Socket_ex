@@ -1,0 +1,3 @@
+﻿  MultithreadTCPServer.cpp
+d:\socket\socket_ex\20200812_multithreadtcpserver\multithreadtcpserver\multithreadtcpserver\multithreadtcpserver.cpp(104): warning C4101: 'buf' :참조되지 않은 지역 변수입니다.
+  MultithreadTCPServer.vcxproj -> D:\socket\Socket_ex\20200812_MultithreadTCPServer\MultithreadTCPServer\Debug\MultithreadTCPServer.exe
